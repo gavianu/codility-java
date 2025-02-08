@@ -30,7 +30,7 @@ Alternatively, do you have any recent **Codility test report** that I can analyz
 
 ---
 
-## Lesson 01
+## \*\*🔹 Lesson 01
 
 ### **Codility Training - Challenge #1**
 
