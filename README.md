@@ -386,3 +386,69 @@ public int countPassingCars(int[] A)
 - Every time you find a `1`, all previous `0`s contribute to passing car pairs.
 
 ---
+
+### **Codility Training - Challenge #7**
+
+Let's try a **harder problem** that involves **stack data structures**.
+
+---
+
+## **🔹 Problem: Stone Wall (Stack)**
+
+You are given an **array A of N integers**, where each element represents the **height of a wall at position i**.
+
+✅ **Find the minimum number of blocks required to build the wall.**
+
+Each block can be **of any height**, but it must be **rectangular** and extend **to the ground**.
+
+---
+
+### **📌 Example**
+
+```java
+Input: A = [8, 8, 5, 7, 9, 8, 7, 4, 8]
+Output: 7
+```
+
+💡 **Explanation:**  
+We need **7 blocks** to build the wall:
+
+- `8` (first block)
+- `5` (second block starts after 8)
+- `7` (third block starts after 5)
+- `9` (fourth block starts after 7)
+- `8` (fifth block starts after 9)
+- `7` (sixth block starts after 8)
+- `4` (seventh block starts after 7)
+
+---
+
+## **🔹 Function Signature**
+
+```java
+public int minBlocksToBuildWall(int[] A)
+```
+
+---
+
+## **🔹 Constraints**
+
+✅ `1 ≤ N ≤ 100,000`  
+✅ `1 ≤ A[i] ≤ 1,000,000,000`  
+✅ **O(N) time complexity required** (Brute force O(N²) is too slow!)
+
+---
+
+## **🔹 Hints**
+
+1️⃣ **Use a stack to track height changes**
+
+- A **new block** is needed when `A[i] > stack.peek()`.
+- **Pop elements** when `A[i] < stack.peek()`, then add the new height.
+- Count the **number of times we push new heights** as blocks.
+
+2️⃣ **Avoid unnecessary blocks**
+
+- Only **push** a height **if it's different** from the last pushed one.
+
+---
