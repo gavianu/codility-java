@@ -520,7 +520,72 @@ public int maxNonOverlappingSegments(int[] A, int[] B)
 
 ---
 
-## **🔹 Next Steps**
+### **Codility Training - Challenge #9**
 
-🚀 **Solve this in Java and post your code here.**  
-I'll **evaluate** your solution and suggest improvements! 🎯
+Let's step up the difficulty with **binary search and prefix sums**.
+
+---
+
+## **🔹 Problem: Min Max Division (Binary Search + Greedy)**
+
+You are given **an array A of N integers** and **two integers K and M**:
+
+- **K** represents the **maximum number of blocks** you can split A into.
+- **M** is the **maximum element value in A**.
+- You must **divide A into K blocks** such that the **largest sum among all blocks is minimized**.
+
+✅ **Return the minimal possible largest sum of a block.**
+
+---
+
+### **📌 Example**
+
+```java
+Input: K = 3, A = [2, 1, 5, 1, 2, 2, 2]
+Output: 6
+```
+
+💡 **Explanation:**  
+We can split A into **3 blocks**:
+
+1. `[2, 1, 5]` → sum `= 8`
+2. `[1, 2]` → sum `= 3`
+3. `[2, 2]` → sum `= 4`
+
+The **largest sum among blocks is `6`**, which is the minimal possible.
+
+✔ **Return `6`.** ✅
+
+---
+
+## **🔹 Function Signature**
+
+```java
+public int minMaxDivision(int K, int M, int[] A)
+```
+
+---
+
+## **🔹 Constraints**
+
+✅ `1 ≤ K ≤ N ≤ 100,000`  
+✅ `1 ≤ M ≤ 10,000`  
+✅ `1 ≤ A[i] ≤ M`  
+✅ **O(N log sum(A)) time complexity required** (Brute force O(N²) is too slow!)
+
+---
+
+## **🔹 Hints**
+
+1️⃣ **Binary search on the possible range of block sums**
+
+- The **minimum possible sum** is the **max element in A** (a block of 1 element).
+- The **maximum possible sum** is the **sum of A** (only 1 block).
+- Use **binary search** to find the **smallest valid block sum**.
+
+2️⃣ **Use a greedy function to check if a sum is valid**
+
+- Try to split A into **K blocks**.
+- If more than **K blocks** are needed, increase the sum limit.
+
+---
