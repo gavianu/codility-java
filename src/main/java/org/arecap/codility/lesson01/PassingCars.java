@@ -2,7 +2,7 @@
 package org.arecap.codility.lesson01;
 
 
-class PassingCars {
+public class PassingCars {
     
     public int countPassingCars(int[] A) {
         int count = 0;      // Count of passing cars

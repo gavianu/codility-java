@@ -589,3 +589,61 @@ public int minMaxDivision(int K, int M, int[] A)
 - If more than **K blocks** are needed, increase the sum limit.
 
 ---
+
+### **Codility Training - Challenge #10**
+
+Let's take on a **dynamic programming** problem that requires **subarray calculations**.
+
+---
+
+## **🔹 Problem: Max Profit (Kadane’s Algorithm)**
+
+You are given **an array A of N integers**, representing **daily stock prices**.
+
+✅ **Find the maximum possible profit you can achieve by buying and selling once.**
+
+- You **must buy before selling**.
+- If **no profit is possible**, return `0`.
+
+---
+
+### **📌 Example**
+
+```java
+Input: A = [23171, 21011, 21123, 21366, 21013, 21367]
+Output: 356
+```
+
+💡 **Explanation:**
+
+- Buy at `A[1] = 21011`
+- Sell at `A[5] = 21367`
+- **Profit = `21367 - 21011 = 356`** ✅
+
+---
+
+## **🔹 Function Signature**
+
+```java
+public int maxProfit(int[] A)
+```
+
+---
+
+## **🔹 Constraints**
+
+✅ `0 ≤ N ≤ 100,000`  
+✅ `0 ≤ A[i] ≤ 1,000,000`  
+✅ **O(N) time complexity required** (Brute force O(N²) is too slow!)
+
+---
+
+## **🔹 Hints**
+
+1️⃣ **Use a Greedy approach with one pass (Kadane’s Algorithm for min tracking).**
+
+- Keep track of **minimum price seen so far**.
+- At each step, calculate potential **profit** if sold today.
+- Update the **maximum profit** seen so far.
+
+---

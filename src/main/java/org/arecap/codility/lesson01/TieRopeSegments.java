@@ -1,6 +1,5 @@
 package org.arecap.codility.lesson01;
 
-
 public class TieRopeSegments {
 
     public int countRopes(int K, int[] A) {

@@ -1,7 +1,7 @@
 package org.arecap.codility.lesson01;
 
 
-class MinMaxDivision {
+public class MinMaxDivision {
 
     public int minMaxDivision(int K, int M, int[] A) {
         int lowerBound = getMax(A);  // Minimum possible max sum (largest element)

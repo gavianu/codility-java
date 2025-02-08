@@ -2,7 +2,7 @@ package org.arecap.codility.lesson01;
 
 import java.util.Arrays;
 
-class MaxProductThree {
+public class MaxProductThree {
 
     public int maxProductOfThree(int[] A) {
         Arrays.sort(A);
@@ -13,5 +13,5 @@ class MaxProductThree {
         
         return Math.max(productWithNegatives, productWithPositives);
     }
-    
+
 }

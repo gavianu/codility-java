@@ -1,7 +1,7 @@
 package org.arecap.codility.lesson01;
 
 
-class EquilibriumIndex {
+public class EquilibriumIndex {
 
     public int findEquilibriumIndex(int[] A) {
         int totalSum = 0;

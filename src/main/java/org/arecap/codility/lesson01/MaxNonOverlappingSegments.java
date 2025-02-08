@@ -1,7 +1,7 @@
 package org.arecap.codility.lesson01;
 
 
-class MaxNonOverlappingSegments {
+public class MaxNonOverlappingSegments {
 
     public int maxNonOverlappingSegments(int[] A, int[] B) {
         int N = A.length;

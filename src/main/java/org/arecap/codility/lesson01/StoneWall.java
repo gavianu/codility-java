@@ -2,8 +2,6 @@ package org.arecap.codility.lesson01;
 
 import java.util.Stack;
 
-
-
 public class StoneWall {
 
     public int minBlocksToBuildWall(int[] H) {
