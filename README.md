@@ -28,6 +28,10 @@ Would you like me to test your current level with a **sample Codility-style ques
 
 Alternatively, do you have any recent **Codility test report** that I can analyze to tailor the training to your weaknesses?
 
+---
+
+## Lesson 01
+
 ### **Codility Training - Challenge #1**
 
 ---
