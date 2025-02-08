@@ -452,3 +452,75 @@ public int minBlocksToBuildWall(int[] A)
 - Only **push** a height **if it's different** from the last pushed one.
 
 ---
+
+### **Codility Training - Challenge #8**
+
+Let's move to a **more advanced challenge** that involves **greedy algorithms and arrays**.
+
+---
+
+## **🔹 Problem: Max Non-Overlapping Segments (Greedy Algorithm)**
+
+You are given **two arrays A and B of N integers**, representing **N segments on a number line**:
+
+- Each segment **starts at A[i]** and **ends at B[i]**.
+- Segments may **overlap**.
+
+✅ **Find the maximum number of non-overlapping segments you can select**.
+
+---
+
+### **📌 Example**
+
+```java
+Input:
+A = [1, 3, 7, 9, 9]
+B = [5, 6, 8, 9, 10]
+Output: 3
+```
+
+💡 **Explanation:**  
+The optimal way to select **3 non-overlapping segments** is:
+
+1. Pick segment **(1,5)**
+2. Pick segment **(7,8)**
+3. Pick segment **(9,10)**
+
+✔ **Total non-overlapping segments = `3`** ✅
+
+---
+
+## **🔹 Function Signature**
+
+```java
+public int maxNonOverlappingSegments(int[] A, int[] B)
+```
+
+---
+
+## **🔹 Constraints**
+
+✅ `0 ≤ N ≤ 100,000`  
+✅ `1 ≤ A[i] ≤ B[i] ≤ 1,000,000,000`  
+✅ **O(N) or O(N log N) time complexity required** (Brute force O(N²) is too slow!)
+
+---
+
+## **🔹 Hints**
+
+1️⃣ **Sort the segments by their ending point (`B[i]`)**
+
+- Always pick the segment that **ends earliest** (Greedy choice).
+- Skip all segments that overlap with the chosen one.
+
+2️⃣ **Use a greedy approach with a simple loop**
+
+- Start with **B[0] as the first picked segment**.
+- Keep adding the next **non-overlapping** segment.
+
+---
+
+## **🔹 Next Steps**
+
+🚀 **Solve this in Java and post your code here.**  
+I'll **evaluate** your solution and suggest improvements! 🎯
