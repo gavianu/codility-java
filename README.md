@@ -318,3 +318,71 @@ public int countRopes(int K, int[] A)
   2️⃣ **Only traverse the array once** (O(N) solution required).
 
 ---
+
+### **Codility Training - Challenge #6**
+
+Let's move on to a **more complex problem** that involves **arrays and prefix sums**.
+
+---
+
+## **🔹 Problem: Passing Cars (Prefix Sum)**
+
+You are given an array **A** of **N integers**. The array represents cars on a road:
+
+- `0` represents a **car traveling east**.
+- `1` represents a **car traveling west**.
+
+✅ **Count the number of passing car pairs (`0,1`) on the road.**
+
+A passing car pair is when a car **traveling east (`0`)** passes a car **traveling west (`1`)**.
+
+---
+
+### **📌 Example**
+
+```java
+Input: A = [0, 1, 0, 1, 1]
+Output: 5
+```
+
+💡 **Explanation:**  
+The following **pairs** are valid:
+
+- `(A[0] → A[1])`
+- `(A[0] → A[3])`
+- `(A[0] → A[4])`
+- `(A[2] → A[3])`
+- `(A[2] → A[4])`
+
+✔ **Total passing cars = `5`** ✅
+
+---
+
+## **🔹 Function Signature**
+
+```java
+public int countPassingCars(int[] A)
+```
+
+---
+
+## **🔹 Constraints**
+
+✅ `1 ≤ N ≤ 100,000`  
+✅ Each element in `A` is either `0` or `1`.  
+✅ **O(N) time complexity required** (Brute force O(N²) is too slow!)
+
+---
+
+## **🔹 Hints**
+
+1️⃣ **A naive approach (O(N²)) is too slow**
+
+- Iterating through each `0` and counting how many `1`s appear after it is inefficient.
+
+2️⃣ **Use a prefix sum or a counter**
+
+- Count **how many `0`s have appeared so far**.
+- Every time you find a `1`, all previous `0`s contribute to passing car pairs.
+
+---
